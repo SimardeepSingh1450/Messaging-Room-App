@@ -4,7 +4,9 @@ import { useEffect, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import { SiSocketdotio } from "react-icons/si";
 
-const socketClient = io.connect("http://localhost:3001");
+const socketClient = io.connect(
+  "https://messaging-app-backend-c49u.onrender.com"
+);
 function App() {
   const [username, setUsername] = useState("");
   const [sentMsg, setSentMsg] = useState("");
@@ -21,13 +23,13 @@ function App() {
       return;
     }
     socketClient.emit("sendMsg", { username: username, msg: sentMsg, msgs });
-    toast("Message sent successfully", { position: "top-right" });
+    toast.success("Message sent successfully", { position: "top-right" });
   };
 
   useEffect(() => {
     socketClient.on("rcvMsg", (data) => {
       if (data.msgs != msgs) {
-        toast.success(`New message received`, {
+        toast.info(`New message received`, {
           position: "top-right",
           theme: "colored",
         });
