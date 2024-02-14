@@ -1,0 +1,145 @@
+.App {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-image: linear-gradient(to top right,#5532e0,#5a58c5,#6363f0);
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.msgMainOuterDiv{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: flex-start;
+}
+
+.msgOuterDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 1vw;
+  padding-right: 2vw;
+  height: 300px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border-radius: 30px;
+  background-image: linear-gradient(to top right,#090972,#5b5be0);
+}
+
+.msgMainDiv{
+  /* border-style: solid; */
+  margin: 0.5vw;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+}
+
+.userName{
+  display: flex;
+  /* border-style: solid; */
+}
+
+.userName p{
+  border-radius: 30px 30px 30px 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0px;
+  margin-bottom: 5px;
+  background-image: linear-gradient(to right,#4146d2,#f77ef6);
+  color: white;
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.msg{
+  display: flex;
+}
+
+.msg p{
+  /* border-style: solid; */
+  border-radius: 0px 30px 30px 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0px;
+  background:white;
+  border-color: black;
+  border-width: 1px;
+  color: black;
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.mainAppDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* border-style: solid; */
+  height: 100vh;
+}
+
+.usernameInput{
+  padding: 10px;
+  border-radius: 20px;
+  margin: 10px;
+  border-width: 0px;
+}
+
+.inputMainDiv{
+  display: flex;
+  justify-content: center;
+}
+
+.sndMsgButton{
+  padding: 10px;
+  border-radius: 20px;
+  margin: 10px;
+  border-width: 0px;
+  transition: all 0.2s linear ease-in-out;
+}
+
+.sndMsgButton:hover{
+  cursor: pointer;
+  box-shadow: 0px 0px 5px black;
+}
